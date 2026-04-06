@@ -1,0 +1,43 @@
++----------------+
+|     ORDERS     |
++----------------+
+| PK order_id    |
+| order_date     |
+| order_time     |
++----------------+
+         |
+         | 1
+         |
+         | many
++-----------------------+
+|    ORDER_DETAILS      |
++-----------------------+
+| PK order_details_id   |
+| FK order_id           |
+| FK pizza_id           |
+| quantity              |
++-----------------------+
+         |
+         | many
+         |
+         | 1
++----------------+
+|     PIZZAS     |
++----------------+
+| PK pizza_id    |
+| FK pizza_type_id|
+| size           |
+| price          |
++----------------+
+         |
+         | many
+         |
+         | 1
++----------------------+
+|    PIZZA_TYPES       |
++----------------------+
+| PK pizza_type_id     |
+| name                 |
+| category             |
+| ingredients          |
++----------------------+
